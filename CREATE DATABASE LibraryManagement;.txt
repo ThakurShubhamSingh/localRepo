@@ -1,0 +1,30 @@
+CREATE DATABASE librardb;
+USE librardb;
+
+-- Books Table
+CREATE TABLE Books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    price DECIMAL(10,2) NOT NULL
+);
+
+Create (Insert a New Book)
+
+INSERT INTO Books (title, author, price) 
+VALUES ('1', 'Ram',100);
+
+Get all books:
+
+SELECT * FROM Books;
+
+SELECT * FROM Books WHERE LOWER(title) LIKE LOWER('%Ram%');
+
+
+UPDATE Books 
+SET title = '1', author = 'Ram', price = 100 
+WHERE id = 1;
+
+Delete
+
+DELETE FROM Books WHERE id = 1;
